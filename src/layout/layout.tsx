@@ -4,19 +4,25 @@ import { Box } from "@chakra-ui/react"
 
 const Layout = ({children}: {children: JSX.Element}) => {
     return (
-        <Box bg={"#121212"} minH={"100vh"} color={"black"} >
+        <Box bg={"#121212"} minH={"100vh"} color={"#DDE6ED"} >
             <Box>
                 <Box borderBottom={"1px solid rgba(256, 256, 256, 0.1)"} mb={"30px"} >
                     <Box maxW={"1280px"} mx={"auto"} >
-                        <Navbar/>
+                        <header>
+                            <Navbar/>
+                        </header>
                     </Box>
                 </Box>
                 <Box maxW={"1280px"} mx={"auto"}>
-                    {children}
+                    <main>
+                        {children}
+                    </main>
                 </Box>
-                <Box borderTop={"1px solid rgba(256, 256, 256, 0.1)"} pt={"20px"} color={"white"} shadow={"2xl"} bg={"#121212"} >
+                <Box borderTop={"1px solid rgba(256, 256, 256, 0.1)"} pt={"20px"} color={"white"} bg={"#121212"} >
                     <Box maxW={"1280px"} mx={"auto"} >
-                        <Footer/>
+                        <footer>
+                            <Footer/>
+                        </footer>
                     </Box>
                 </Box>
             </Box>
