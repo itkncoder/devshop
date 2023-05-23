@@ -1,8 +1,14 @@
 import Footer from "@/components/footer/footer"
 import Navbar from "@/components/navbar/navbar"
 import { Box } from "@chakra-ui/react"
+import { useEffect } from "react"
 
 const Layout = ({children}: {children: JSX.Element}) => {
+
+    useEffect(() => {
+        localStorage.setItem("chakra-ui-color-mode", "dark")
+    }, [])
+
     return (
         <Box bg={"#121212"} minH={"100vh"} color={"#DDE6ED"} >
             <Box>

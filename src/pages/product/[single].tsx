@@ -38,7 +38,7 @@ const Single = () => {
             <Layout>
                 <Box my={"50px"} >
                     <Text fontSize={"24px"} fontWeight={600} textTransform={"uppercase"} >{router.query.single}</Text>
-                    <Box display={"flex"} justifyContent={"start"} >
+                    <Box my={"20px"} display={"flex"} justifyContent={"start"} >
                         <Box>
                             <Swiper style={{width: "460px", padding: "0 25px"}} slidesPerView={1} navigation={true} modules={[Navigation]}>
                                 <SwiperSlide style={{width: "fit-content"}}>
@@ -59,7 +59,7 @@ const Single = () => {
                                 <Text fontSize={"18px"} >Kategoriyalar: Futbolkalar</Text>
                             </Box>
                             <Box my={"20px"} display={"flex"} alignItems={"center"} gap={"5px"} >
-                                <Text fontSize={"20px"} fontWeight={600} textTransform={"uppercase"} >$30 - $40</Text>
+                                <Text fontSize={"20px"} fontWeight={600} >Narxi: $30 - $40</Text>
                             </Box>
                             <Box borderBottom={"1px solid rgba(256, 256, 256, 0.1)"} pb={"25px"}>
                                 <Box my={"3px"} display={"flex"} justifyContent={"space-between"} gap={"20px"} alignItems={"center"}>
@@ -87,8 +87,8 @@ const Single = () => {
                                     <NumberInput w={"75px"} defaultValue={"1"} >
                                         <NumberInputField />
                                         <NumberInputStepper>
-                                            <NumberIncrementStepper />
-                                            <NumberDecrementStepper />
+                                            <NumberIncrementStepper color={"#DDE6ED"} />
+                                            <NumberDecrementStepper color={"#DDE6ED"} />
                                         </NumberInputStepper>
                                     </NumberInput>
                                     <Button display={"flex"} justifyContent={"center"} alignItems={"center"} gap={"10px"} bg={"#27374D"} _hover={{bg: "#385b75"}} >Savatga qo'shish<FontAwesomeIcon icon={faShoppingCart} /></Button>
@@ -107,7 +107,7 @@ const Single = () => {
                 <ModalOverlay />
                 <ModalContent bg={"transparent"} boxShadow={"0"} >
                     <ModalHeader></ModalHeader>
-                    <ModalCloseButton />
+                    <ModalCloseButton color={"#DDE6ED"} />
                     <ModalBody>
                         <Box padding={"20px"} >
                             <Image priority style={{width: "100%", height: "100%", objectFit: 'cover', borderRadius: "15px"}} width={1200} height={1200} alt="product" src={"https://merchshop.in/wp-content/uploads/2019/06/Apple-Developer-t-shirt-white.jpg"} />
