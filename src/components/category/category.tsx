@@ -13,8 +13,8 @@ const Category = ({title, desc}: {title: string, desc: JSX.Element}) => {
         <Box my={"50px"} >
             <Box>
                 <Box display={"flex"} flexDirection={"column"} alignItems={"center"} >
-                    <Text fontSize={"2xl"} color={"#27374D"} fontWeight={"600"} >{title}</Text>
-                    <Text fontSize={"lg"} color={"#27374D"} >{desc}</Text>
+                    <Text fontSize={"2xl"} color={"#DDE6ED"} fontWeight={"600"} >{title}</Text>
+                    <Text fontSize={"lg"} color={"#DDE6ED"} >{desc}</Text>
                 </Box>
             </Box>
             <Box my={"30px"}>

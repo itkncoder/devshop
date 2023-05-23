@@ -9,9 +9,7 @@
 
 .a {
     border: 1px solid #27374D;
-    border: 1px solid #202e42;
-    background: #526D82;
-    color: #9DB2BF;
+    background: #385b75;
     outline: 1px solid #DDE6ED;
 }
 
@@ -19,9 +17,9 @@
     width: 8px;
 }
 *::-webkit-scrollbar-track {
-    background: #DDE6ED;
+    background: #121212;
 }
 *::-webkit-scrollbar-thumb {
-    background: #27374D;
+    background: #385b75;
     border-radius: 3px;
 }

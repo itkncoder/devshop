@@ -20,7 +20,7 @@ const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
-        <Box mb={"30px"} >
+        <Box >
             <Box py={"25px"} display={"flex"} justifyContent={"space-between"} alignItems={"center"} >
                 <Box>
                     <Text fontSize={"30px"} fontWeight={600} color={"#DDE6ED"} >DEVSHOP</Text>
@@ -42,7 +42,7 @@ const Navbar = () => {
                 size={"sm"}
             >
                 <DrawerOverlay />
-                <DrawerContent bg={"#27374D"} >
+                <DrawerContent color={"#DDE6ED"} bg={"#121212"} >
                     <DrawerCloseButton />
                     <DrawerHeader>Navigatsiya</DrawerHeader>
 

@@ -4,9 +4,9 @@ import { Box } from "@chakra-ui/react"
 
 const Layout = ({children}: {children: JSX.Element}) => {
     return (
-        <Box bg={"#DDE6ED"} minH={"100vh"} color={"black"} >
+        <Box bg={"#121212"} minH={"100vh"} color={"black"} >
             <Box>
-                <Box shadow={"2xl"} bg={"#27374D"} >
+                <Box borderBottom={"1px solid rgba(256, 256, 256, 0.1)"} mb={"30px"} >
                     <Box maxW={"1280px"} mx={"auto"} >
                         <Navbar/>
                     </Box>
@@ -14,7 +14,7 @@ const Layout = ({children}: {children: JSX.Element}) => {
                 <Box maxW={"1280px"} mx={"auto"}>
                     {children}
                 </Box>
-                <Box color={"white"} shadow={"2xl"} bg={"#27374D"} >
+                <Box borderTop={"1px solid rgba(256, 256, 256, 0.1)"} pt={"20px"} color={"white"} shadow={"2xl"} bg={"#121212"} >
                     <Box maxW={"1280px"} mx={"auto"} >
                         <Footer/>
                     </Box>

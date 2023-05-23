@@ -6,7 +6,7 @@ const Footer = () => {
         <Box py={"35px"} >
             <Box>
                 <Box>
-                    <Box>
+                    <Box display={"flex"} flexDirection={"column"} alignItems={"start"} >
                         <Text fontWeight={600} my={"3px"} >Kategoriyalar:</Text>
                         <a href="/"><Text _hover={{textDecoration: "underline"}}>Yangilari</Text></a>
                         <a href="/"><Text _hover={{textDecoration: "underline"}}>Futbolkalar</Text></a>
