@@ -20,6 +20,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import { useRouter } from "next/router"
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+import { Navigation } from "swiper";
+
 const Single = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -32,8 +39,19 @@ const Single = () => {
                 <Box my={"50px"} >
                     <Text fontSize={"24px"} fontWeight={600} textTransform={"uppercase"} >{router.query.single}</Text>
                     <Box display={"flex"} justifyContent={"start"} >
-                        <Box my={"20px"} >
-                            <Image onClick={onOpen} priority style={{cursor: "pointer", width: "400px", height: "420px", objectFit: 'cover', borderRadius: "10px"}} width={600} height={6000} alt="product" src={"https://merchshop.in/wp-content/uploads/2019/06/Apple-Developer-t-shirt-white.jpg"} />
+                        <Box>
+                            <Swiper style={{width: "460px", padding: "0 25px"}} slidesPerView={1} navigation={true} modules={[Navigation]}>
+                                <SwiperSlide style={{width: "fit-content"}}>
+                                    <Box>
+                                        <Image onClick={onOpen} priority style={{cursor: "pointer", width: "400px", height: "420px", objectFit: 'cover', borderRadius: "10px"}} width={600} height={6000} alt="product" src={"https://merchshop.in/wp-content/uploads/2019/06/Apple-Developer-t-shirt-white.jpg"} />
+                                    </Box>
+                                </SwiperSlide>
+                                <SwiperSlide style={{width: "fit-content"}}>
+                                    <Box>
+                                        <Image onClick={onOpen} priority style={{cursor: "pointer", width: "400px", height: "420px", objectFit: 'cover', borderRadius: "10px"}} width={600} height={6000} alt="product" src={"https://merchshop.in/wp-content/uploads/2019/06/Apple-Developer-t-shirt-white.jpg"} />
+                                    </Box>
+                                </SwiperSlide>
+                            </Swiper>
                         </Box>
                         <Box p={"35px 0 0 50px"} w={"50%"} >
                             <Box w={"100%"} borderBottom={"1px solid rgba(256, 256, 256, 0.1)"} pb={"15px"} display={"flex"} flexDirection={"column"} alignItems={"start"} gap={"5px"} >
@@ -50,14 +68,14 @@ const Single = () => {
                                 </Box>
                                 <Box display={"flex"} justifyContent={"space-between"} gap={"20px"} alignItems={"center"} >
                                     <Select bg={"#121212"} placeholder='Rangini tanlang'>
-                                        <option value='Oq'>Oq</option>
-                                        <option value='Qora'>Qora</option>
-                                        <option value='Yashil'>Yashil</option>
+                                        <option style={{background: "#121212", color: "#DDE6ED"}} value='Oq'>Oq</option>
+                                        <option style={{background: "#121212", color: "#DDE6ED"}} value='Qora'>Qora</option>
+                                        <option style={{background: "#121212", color: "#DDE6ED"}} value='Yashil'>Yashil</option>
                                     </Select>
                                     <Select bg={"#121212"} placeholder='Kattaligini tanlang'>
-                                        <option value='xs'>xs</option>
-                                        <option value='sm'>sm</option>
-                                        <option value='md'>md</option>
+                                        <option style={{background: "#121212", color: "#DDE6ED"}} value='xs'>xs</option>
+                                        <option style={{background: "#121212", color: "#DDE6ED"}} value='sm'>sm</option>
+                                        <option style={{background: "#121212", color: "#DDE6ED"}} value='md'>md</option>
                                     </Select>
                                 </Box>
                             </Box>
