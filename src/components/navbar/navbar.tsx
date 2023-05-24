@@ -26,9 +26,11 @@ const Navbar = () => {
                     <Text fontSize={"30px"} fontWeight={600} color={"#DDE6ED"} >DEVSHOP</Text>
                 </Box>
                 <Box display={"flex"} alignItems={"center"} gap={"25px"} >
-                    <Button colorScheme='black' variant='ghost' >
-                        <FontAwesomeIcon cursor={"pointer"} color="#DDE6ED" size="xl" icon={faCartShopping} />   
-                    </Button>
+                    <Link href={"/cart"}>
+                        <Button colorScheme='black' variant='ghost' >
+                            <FontAwesomeIcon cursor={"pointer"} color="#DDE6ED" size="xl" icon={faCartShopping} />   
+                        </Button>
+                    </Link>
                     <Button colorScheme='black' variant='ghost' onClick={onOpen} >
                         <FontAwesomeIcon cursor={"pointer"} color="#DDE6ED" size="xl" icon={faBars} />
                     </Button> 

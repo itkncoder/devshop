@@ -7,13 +7,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper";
+import Link from 'next/link';
 
 const Category = ({title, desc}: {title: string, desc: JSX.Element}) => {
     return (
         <Box my={"50px"} >
             <Box>
                 <Box display={"flex"} flexDirection={"column"} alignItems={"center"} >
-                    <Text fontSize={"2xl"} color={"#DDE6ED"} fontWeight={"600"} >{title}</Text>
+                    <Link href={`/category/${title}`}>
+                        <Text fontSize={"2xl"} color={"#DDE6ED"} fontWeight={"600"} >{title}</Text>
+                    </Link>
                     <Text fontSize={"lg"} color={"#DDE6ED"} >{desc}</Text>
                 </Box>
             </Box>
