@@ -3,8 +3,9 @@ import { Box, Button, Text } from "@chakra-ui/react"
 import { faBasketShopping, faCartShopping, faShoppingCart, faTrash } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
+import Link from "next/link"
 
-const CartItem = () => {
+export const CartItem = () => {
     return (
         <Box border={"1px solid rgba(256, 256, 256, 0.1)"} bg={"#0a0a0a"} p={"10px 20px"} shadow={"2xl"} rounded={"2xl"} display={"flex"} alignItems={"center"} justifyContent={"space-between"} >
             <Box display={"flex"} alignItems={"start"} gap={"20px"}>
@@ -42,9 +43,11 @@ const Cart = () => {
                         <CartItem/>
                         <CartItem/>
                     </Box>
-                    <Box my={"25px"} display={"flex"} justifyContent={"end"} alignItems={"center"} gap={"15px"} >
+                    <Box my={"25px"} display={"flex"} justifyContent={"end"} alignItems={"center"} gap={"15px"}>
                         <Button>Admin bilan bog'lanish</Button>
-                        <Button display={"flex"} justifyContent={"center"} alignItems={"center"} gap={"10px"} bg={"#27374D"} _hover={{bg: "#385b75"}} >Sotib olish!<FontAwesomeIcon icon={faCartShopping}/></Button>
+                        <Link href={"/checkout"} >
+                            <Button display={"flex"} justifyContent={"center"} alignItems={"center"} gap={"10px"} bg={"#27374D"} _hover={{bg: "#385b75"}} >Sotib olish!<FontAwesomeIcon icon={faCartShopping}/></Button>
+                        </Link>
                     </Box>
                 </Box>
             </Layout>
